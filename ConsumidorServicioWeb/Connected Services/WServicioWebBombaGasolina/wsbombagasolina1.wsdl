@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="listado_bombagasolina">
+        <s:complexType />
+      </s:element>
+      <s:element name="listado_bombagasolinaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="listado_bombagasolinaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="datos_bombagasolina">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="NoBombaGasolina" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="datos_bombagasolinaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="datos_bombagasolinaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertar_bombagasolina">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IdTipoGasolina" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="CantidadGasolina" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="MontoTotalGas" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="Caracteristicas" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertar_bombagasolinaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="insertar_bombagasolinaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="actualizar_bombagasolina">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="NoBombaGasolina" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IdTipoGasolina" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="CantidadGasolina" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="MontoTotalGas" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="Caracteristicas" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="actualizar_bombagasolinaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="actualizar_bombagasolinaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="eliminar_bombagasolina">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="NoBombaGasolina" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="eliminar_bombagasolinaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="eliminar_bombagasolinaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="listado_bombagasolinaSoapIn">
+    <wsdl:part name="parameters" element="tns:listado_bombagasolina" />
+  </wsdl:message>
+  <wsdl:message name="listado_bombagasolinaSoapOut">
+    <wsdl:part name="parameters" element="tns:listado_bombagasolinaResponse" />
+  </wsdl:message>
+  <wsdl:message name="datos_bombagasolinaSoapIn">
+    <wsdl:part name="parameters" element="tns:datos_bombagasolina" />
+  </wsdl:message>
+  <wsdl:message name="datos_bombagasolinaSoapOut">
+    <wsdl:part name="parameters" element="tns:datos_bombagasolinaResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertar_bombagasolinaSoapIn">
+    <wsdl:part name="parameters" element="tns:insertar_bombagasolina" />
+  </wsdl:message>
+  <wsdl:message name="insertar_bombagasolinaSoapOut">
+    <wsdl:part name="parameters" element="tns:insertar_bombagasolinaResponse" />
+  </wsdl:message>
+  <wsdl:message name="actualizar_bombagasolinaSoapIn">
+    <wsdl:part name="parameters" element="tns:actualizar_bombagasolina" />
+  </wsdl:message>
+  <wsdl:message name="actualizar_bombagasolinaSoapOut">
+    <wsdl:part name="parameters" element="tns:actualizar_bombagasolinaResponse" />
+  </wsdl:message>
+  <wsdl:message name="eliminar_bombagasolinaSoapIn">
+    <wsdl:part name="parameters" element="tns:eliminar_bombagasolina" />
+  </wsdl:message>
+  <wsdl:message name="eliminar_bombagasolinaSoapOut">
+    <wsdl:part name="parameters" element="tns:eliminar_bombagasolinaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="wsbombagasolinaSoap">
+    <wsdl:operation name="listado_bombagasolina">
+      <wsdl:input message="tns:listado_bombagasolinaSoapIn" />
+      <wsdl:output message="tns:listado_bombagasolinaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="datos_bombagasolina">
+      <wsdl:input message="tns:datos_bombagasolinaSoapIn" />
+      <wsdl:output message="tns:datos_bombagasolinaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertar_bombagasolina">
+      <wsdl:input message="tns:insertar_bombagasolinaSoapIn" />
+      <wsdl:output message="tns:insertar_bombagasolinaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="actualizar_bombagasolina">
+      <wsdl:input message="tns:actualizar_bombagasolinaSoapIn" />
+      <wsdl:output message="tns:actualizar_bombagasolinaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="eliminar_bombagasolina">
+      <wsdl:input message="tns:eliminar_bombagasolinaSoapIn" />
+      <wsdl:output message="tns:eliminar_bombagasolinaSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="wsbombagasolinaSoap" type="tns:wsbombagasolinaSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="listado_bombagasolina">
+      <soap:operation soapAction="http://tempuri.org/listado_bombagasolina" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="datos_bombagasolina">
+      <soap:operation soapAction="http://tempuri.org/datos_bombagasolina" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertar_bombagasolina">
+      <soap:operation soapAction="http://tempuri.org/insertar_bombagasolina" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="actualizar_bombagasolina">
+      <soap:operation soapAction="http://tempuri.org/actualizar_bombagasolina" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminar_bombagasolina">
+      <soap:operation soapAction="http://tempuri.org/eliminar_bombagasolina" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsbombagasolinaSoap12" type="tns:wsbombagasolinaSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="listado_bombagasolina">
+      <soap12:operation soapAction="http://tempuri.org/listado_bombagasolina" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="datos_bombagasolina">
+      <soap12:operation soapAction="http://tempuri.org/datos_bombagasolina" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertar_bombagasolina">
+      <soap12:operation soapAction="http://tempuri.org/insertar_bombagasolina" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="actualizar_bombagasolina">
+      <soap12:operation soapAction="http://tempuri.org/actualizar_bombagasolina" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminar_bombagasolina">
+      <soap12:operation soapAction="http://tempuri.org/eliminar_bombagasolina" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wsbombagasolina">
+    <wsdl:port name="wsbombagasolinaSoap" binding="tns:wsbombagasolinaSoap">
+      <soap:address location="http://localhost/sistemaGasolinera/wsbombagasolina.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsbombagasolinaSoap12" binding="tns:wsbombagasolinaSoap12">
+      <soap12:address location="http://localhost/sistemaGasolinera/wsbombagasolina.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

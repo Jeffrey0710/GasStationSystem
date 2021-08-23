@@ -1,0 +1,32 @@
+﻿body {
+    background-color:lightgray;
+}
+
+.FormLogin {
+    padding-top: 5%;
+    
+}
+
+.TableLogin {
+    border-color: transparent;
+    background-color: darkgray;
+    border-radius: 20px;
+    box-shadow: 1px 4px 15px 0px #000;
+}
+
+.ImageLogin{
+    border-color:#000;
+}
+
+.BtnLogin {
+    font-family: "Montserrat", sans-serif;
+    font-size: small;
+    background-color: #fff;
+    border-color: transparent;
+    border-radius: 5px;
+    box-shadow: 1px 4px 5px 0px #000;
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-left:15px;
+    padding-right:15px;
+}

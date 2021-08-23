@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsFiltrarVentas" targetNamespace="http://tempuri.org/dsFiltrarVentas.xsd" xmlns:mstns="http://tempuri.org/dsFiltrarVentas.xsd" xmlns="http://tempuri.org/dsFiltrarVentas.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsFiltrarVentas" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsFiltrarVentas" msprop:Generator_UserDSName="dsFiltrarVentas">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtFiltrarVentas" msprop:Generator_TableClassName="dtFiltrarVentasDataTable" msprop:Generator_TableVarName="tabledtFiltrarVentas" msprop:Generator_TablePropName="dtFiltrarVentas" msprop:Generator_RowDeletingName="dtFiltrarVentasRowDeleting" msprop:Generator_RowChangingName="dtFiltrarVentasRowChanging" msprop:Generator_RowEvHandlerName="dtFiltrarVentasRowChangeEventHandler" msprop:Generator_RowDeletedName="dtFiltrarVentasRowDeleted" msprop:Generator_UserTableName="dtFiltrarVentas" msprop:Generator_RowChangedName="dtFiltrarVentasRowChanged" msprop:Generator_RowEvArgName="dtFiltrarVentasRowChangeEvent" msprop:Generator_RowClassName="dtFiltrarVentasRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Fecha" msprop:Generator_ColumnVarNameInTable="columnFecha" msprop:Generator_ColumnPropNameInRow="Fecha" msprop:Generator_ColumnPropNameInTable="FechaColumn" msprop:Generator_UserColumnName="Fecha" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="NoFactura" msprop:Generator_ColumnVarNameInTable="columnNoFactura" msprop:Generator_ColumnPropNameInRow="NoFactura" msprop:Generator_ColumnPropNameInTable="NoFacturaColumn" msprop:Generator_UserColumnName="NoFactura" type="xs:int" minOccurs="0" />
+              <xs:element name="NombreCliente" msprop:Generator_ColumnVarNameInTable="columnNombreCliente" msprop:Generator_ColumnPropNameInRow="NombreCliente" msprop:Generator_ColumnPropNameInTable="NombreClienteColumn" msprop:Generator_UserColumnName="NombreCliente" type="xs:string" minOccurs="0" />
+              <xs:element name="MontoTotal" msprop:Generator_ColumnVarNameInTable="columnMontoTotal" msprop:Generator_ColumnPropNameInRow="MontoTotal" msprop:Generator_ColumnPropNameInTable="MontoTotalColumn" msprop:Generator_UserColumnName="MontoTotal" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

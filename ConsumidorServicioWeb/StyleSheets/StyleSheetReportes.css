@@ -1,0 +1,42 @@
+﻿body {
+    background-color: lightgray;
+    
+}
+
+#BtnReporteFactura {
+    font-family: "Montserrat", sans-serif;
+    font-size: large;
+    background-color: #fff;
+    border-color: transparent;
+    border-radius: 5px;
+    box-shadow: 1px 4px 5px 0px #000;
+    padding: 20px, 30px, 20px, 30px;
+    margin: 10px, 20px, 10px, 20px;
+}
+
+#BtnReporteVentas {
+    font-family: "Montserrat", sans-serif;
+    font-size: large;
+    background-color: #fff;
+    border-color: transparent;
+    border-radius: 5px;
+    box-shadow: 1px 4px 5px 0px #000;
+    padding: 20px, 30px, 20px, 30px;
+    margin: 10px, 20px, 10px, 20px;
+}
+.contentReportes {
+    background: lightgray;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.textReportes {
+    color: gray;
+    text-shadow: -3px 3px #ffffff, -3px -3px #ffffff, 3px -3px #ffffff, 3px 3px #f3f3f2, 6px 6px #6ac7c2;
+}
+
+.CellsButton{
+    padding-top:50px;
+    padding-bottom:50px;
+}

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="formas_pago">
+        <s:complexType />
+      </s:element>
+      <s:element name="formas_pagoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="formas_pagoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertar_formaPago">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertar_formaPagoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="insertar_formaPagoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="eliminar_formaPago">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idFormaPago" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="eliminar_formaPagoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="eliminar_formaPagoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="formas_pagoSoapIn">
+    <wsdl:part name="parameters" element="tns:formas_pago" />
+  </wsdl:message>
+  <wsdl:message name="formas_pagoSoapOut">
+    <wsdl:part name="parameters" element="tns:formas_pagoResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertar_formaPagoSoapIn">
+    <wsdl:part name="parameters" element="tns:insertar_formaPago" />
+  </wsdl:message>
+  <wsdl:message name="insertar_formaPagoSoapOut">
+    <wsdl:part name="parameters" element="tns:insertar_formaPagoResponse" />
+  </wsdl:message>
+  <wsdl:message name="eliminar_formaPagoSoapIn">
+    <wsdl:part name="parameters" element="tns:eliminar_formaPago" />
+  </wsdl:message>
+  <wsdl:message name="eliminar_formaPagoSoapOut">
+    <wsdl:part name="parameters" element="tns:eliminar_formaPagoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="wsFormaPagoSoap">
+    <wsdl:operation name="formas_pago">
+      <wsdl:input message="tns:formas_pagoSoapIn" />
+      <wsdl:output message="tns:formas_pagoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertar_formaPago">
+      <wsdl:input message="tns:insertar_formaPagoSoapIn" />
+      <wsdl:output message="tns:insertar_formaPagoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="eliminar_formaPago">
+      <wsdl:input message="tns:eliminar_formaPagoSoapIn" />
+      <wsdl:output message="tns:eliminar_formaPagoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="wsFormaPagoSoap" type="tns:wsFormaPagoSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="formas_pago">
+      <soap:operation soapAction="http://tempuri.org/formas_pago" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertar_formaPago">
+      <soap:operation soapAction="http://tempuri.org/insertar_formaPago" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminar_formaPago">
+      <soap:operation soapAction="http://tempuri.org/eliminar_formaPago" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsFormaPagoSoap12" type="tns:wsFormaPagoSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="formas_pago">
+      <soap12:operation soapAction="http://tempuri.org/formas_pago" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertar_formaPago">
+      <soap12:operation soapAction="http://tempuri.org/insertar_formaPago" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminar_formaPago">
+      <soap12:operation soapAction="http://tempuri.org/eliminar_formaPago" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wsFormaPago">
+    <wsdl:port name="wsFormaPagoSoap" binding="tns:wsFormaPagoSoap">
+      <soap:address location="http://localhost/sistemaGasolinera/wsFormaPago.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsFormaPagoSoap12" binding="tns:wsFormaPagoSoap12">
+      <soap12:address location="http://localhost/sistemaGasolinera/wsFormaPago.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

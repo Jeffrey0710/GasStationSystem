@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="listado_abastecimiento">
+        <s:complexType />
+      </s:element>
+      <s:element name="listado_abastecimientoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="listado_abastecimientoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="datos_abastecimiento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idAbastecimiento" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="datos_abastecimientoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="datos_abastecimientoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertar_abastecimiento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idTipodeGasolina" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cantidadMts3" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombreProveedor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fecha" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertar_abastecimientoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="insertar_abastecimientoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="actualizar_abastecimiento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idAbastecimiento" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idTipodeGasolina" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cantidadMts3" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombreProveedor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fecha" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="actualizar_abastecimientoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="actualizar_abastecimientoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="eliminar_abastecimiento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idAbastecimiento" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="eliminar_abastecimientoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="eliminar_abastecimientoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="listado_abastecimientoSoapIn">
+    <wsdl:part name="parameters" element="tns:listado_abastecimiento" />
+  </wsdl:message>
+  <wsdl:message name="listado_abastecimientoSoapOut">
+    <wsdl:part name="parameters" element="tns:listado_abastecimientoResponse" />
+  </wsdl:message>
+  <wsdl:message name="datos_abastecimientoSoapIn">
+    <wsdl:part name="parameters" element="tns:datos_abastecimiento" />
+  </wsdl:message>
+  <wsdl:message name="datos_abastecimientoSoapOut">
+    <wsdl:part name="parameters" element="tns:datos_abastecimientoResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertar_abastecimientoSoapIn">
+    <wsdl:part name="parameters" element="tns:insertar_abastecimiento" />
+  </wsdl:message>
+  <wsdl:message name="insertar_abastecimientoSoapOut">
+    <wsdl:part name="parameters" element="tns:insertar_abastecimientoResponse" />
+  </wsdl:message>
+  <wsdl:message name="actualizar_abastecimientoSoapIn">
+    <wsdl:part name="parameters" element="tns:actualizar_abastecimiento" />
+  </wsdl:message>
+  <wsdl:message name="actualizar_abastecimientoSoapOut">
+    <wsdl:part name="parameters" element="tns:actualizar_abastecimientoResponse" />
+  </wsdl:message>
+  <wsdl:message name="eliminar_abastecimientoSoapIn">
+    <wsdl:part name="parameters" element="tns:eliminar_abastecimiento" />
+  </wsdl:message>
+  <wsdl:message name="eliminar_abastecimientoSoapOut">
+    <wsdl:part name="parameters" element="tns:eliminar_abastecimientoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="wsAbastecimientoSoap">
+    <wsdl:operation name="listado_abastecimiento">
+      <wsdl:input message="tns:listado_abastecimientoSoapIn" />
+      <wsdl:output message="tns:listado_abastecimientoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="datos_abastecimiento">
+      <wsdl:input message="tns:datos_abastecimientoSoapIn" />
+      <wsdl:output message="tns:datos_abastecimientoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertar_abastecimiento">
+      <wsdl:input message="tns:insertar_abastecimientoSoapIn" />
+      <wsdl:output message="tns:insertar_abastecimientoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="actualizar_abastecimiento">
+      <wsdl:input message="tns:actualizar_abastecimientoSoapIn" />
+      <wsdl:output message="tns:actualizar_abastecimientoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="eliminar_abastecimiento">
+      <wsdl:input message="tns:eliminar_abastecimientoSoapIn" />
+      <wsdl:output message="tns:eliminar_abastecimientoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="wsAbastecimientoSoap" type="tns:wsAbastecimientoSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="listado_abastecimiento">
+      <soap:operation soapAction="http://tempuri.org/listado_abastecimiento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="datos_abastecimiento">
+      <soap:operation soapAction="http://tempuri.org/datos_abastecimiento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertar_abastecimiento">
+      <soap:operation soapAction="http://tempuri.org/insertar_abastecimiento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="actualizar_abastecimiento">
+      <soap:operation soapAction="http://tempuri.org/actualizar_abastecimiento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminar_abastecimiento">
+      <soap:operation soapAction="http://tempuri.org/eliminar_abastecimiento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsAbastecimientoSoap12" type="tns:wsAbastecimientoSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="listado_abastecimiento">
+      <soap12:operation soapAction="http://tempuri.org/listado_abastecimiento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="datos_abastecimiento">
+      <soap12:operation soapAction="http://tempuri.org/datos_abastecimiento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertar_abastecimiento">
+      <soap12:operation soapAction="http://tempuri.org/insertar_abastecimiento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="actualizar_abastecimiento">
+      <soap12:operation soapAction="http://tempuri.org/actualizar_abastecimiento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminar_abastecimiento">
+      <soap12:operation soapAction="http://tempuri.org/eliminar_abastecimiento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wsAbastecimiento">
+    <wsdl:port name="wsAbastecimientoSoap" binding="tns:wsAbastecimientoSoap">
+      <soap:address location="http://localhost/sistemaGasolinera/wsAbastecimiento.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsAbastecimientoSoap12" binding="tns:wsAbastecimientoSoap12">
+      <soap12:address location="http://localhost/sistemaGasolinera/wsAbastecimiento.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

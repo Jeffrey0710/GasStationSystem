@@ -1,0 +1,460 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E6C5B5C6-06F6-4439-A523-99E05ABA3B9A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ConsumidorServicioWeb</RootNamespace>
+    <AssemblyName>ConsumidorServicioWeb</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Web, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data, Version=8.0.23.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\WServicioWebFormaPago\wsFormaPago1.wsdl" />
+    <None Include="Connected Services\WServicioWebReporteFactura\wsReporte1.wsdl" />
+    <None Include="Connected Services\WServicioWebReporteVentas\wsReporteVentas1.wsdl" />
+    <None Include="Connected Services\WServicioWebTipoGasolina\wsTipoGasolina1.wsdl" />
+    <None Include="Connected Services\WServicioWebVenta\wsVenta1.disco" />
+    <None Include="Connected Services\WServicioWebTipoGasolina\wsTipoGasolina1.disco" />
+    <None Include="Connected Services\WServicioWebFormaPago\configuration91.svcinfo" />
+    <None Include="Connected Services\WServicioWebFormaPago\configuration.svcinfo" />
+    <None Include="Connected Services\WServicioWebFormaPago\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\WServicioWebFormaPago\wsFormaPago1.disco" />
+    <None Include="Connected Services\WServicioWebReporteFactura\configuration91.svcinfo" />
+    <None Include="Connected Services\WServicioWebReporteFactura\configuration.svcinfo" />
+    <None Include="Connected Services\WServicioWebReporteFactura\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\WServicioWebReporteFactura\wsReporte1.disco" />
+    <None Include="Connected Services\WServicioWebReporteVentas\configuration91.svcinfo" />
+    <None Include="Connected Services\WServicioWebReporteVentas\configuration.svcinfo" />
+    <None Include="Connected Services\WServicioWebReporteVentas\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\WServicioWebReporteVentas\wsReporteVentas1.disco" />
+    <Content Include="StyleSheets\StyleSheet.css" />
+    <Content Include="StyleSheets\StyleSheetAbastecimiento.css" />
+    <Content Include="StyleSheets\StyleSheetBombaGas.css" />
+    <Content Include="StyleSheets\StyleSheetClientes.css" />
+    <Content Include="StyleSheets\StyleSheetEmpleados.css" />
+    <Content Include="StyleSheets\StyleSheetMaster.css" />
+    <Content Include="StyleSheets\StyleSheetReporteFactura.css" />
+    <Content Include="StyleSheets\StyleSheetReportes.css" />
+    <Content Include="StyleSheets\StyleSheetFormaPago.css" />
+    <Content Include="StyleSheets\StyleSheetReporteVentas.css" />
+    <Content Include="StyleSheets\StyleSheetTipoGas.css" />
+    <Content Include="StyleSheets\StyleSheetUsuarios.css" />
+    <Content Include="StyleSheets\StyleSheetVenta.css" />
+    <Content Include="WebFormFormaPago.aspx" />
+    <Content Include="WebFormLogin.aspx" />
+    <Content Include="WebFormMaster.aspx" />
+    <Content Include="WebFormReporteFactura.aspx" />
+    <Content Include="WebFormReportes.aspx" />
+    <Content Include="WebFormReporteVentas.aspx" />
+    <Content Include="WebFormVenta.aspx" />
+    <Content Include="WebFormVentas.aspx" />
+    <None Include="Connected Services\WServicioWebAbastecimiento\wsAbastecimiento.wsdl" />
+    <None Include="Connected Services\WServicioWebBombaGasolina\wsbombagasolina1.wsdl" />
+    <None Include="Connected Services\WServicioWebCliente\wsCliente1.wsdl" />
+    <None Include="Connected Services\WServicioWebEmpleado\configuration91.svcinfo" />
+    <None Include="Connected Services\WServicioWebEmpleado\configuration.svcinfo" />
+    <None Include="Connected Services\WServicioWebEmpleado\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\WServicioWebCliente\configuration91.svcinfo" />
+    <None Include="Connected Services\WServicioWebCliente\configuration.svcinfo" />
+    <None Include="Connected Services\WServicioWebCliente\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\WServicioWebEmpleado\wsEmpleado1.wsdl" />
+    <None Include="Connected Services\WServicioWebUsuario\wsUsuario1.disco" />
+    <None Include="Connected Services\WServicioWebEmpleado\wsEmpleado1.disco" />
+    <None Include="Connected Services\WServicioWebCliente\wsCliente1.disco" />
+    <None Include="Connected Services\WServicioWebAbastecimiento\configuration91.svcinfo" />
+    <None Include="Connected Services\WServicioWebAbastecimiento\configuration.svcinfo" />
+    <None Include="Connected Services\WServicioWebAbastecimiento\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\WServicioWebAbastecimiento\wsAbastecimiento.disco" />
+    <None Include="Connected Services\WServicioWebTipoGasolina\configuration91.svcinfo" />
+    <None Include="Connected Services\WServicioWebTipoGasolina\configuration.svcinfo" />
+    <None Include="Connected Services\WServicioWebTipoGasolina\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\WServicioWebBombaGasolina\configuration91.svcinfo" />
+    <None Include="Connected Services\WServicioWebBombaGasolina\configuration.svcinfo" />
+    <None Include="Connected Services\WServicioWebBombaGasolina\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\WServicioWebBombaGasolina\wsbombagasolina1.disco" />
+    <None Include="Connected Services\WServicioWebVenta\configuration91.svcinfo" />
+    <None Include="Connected Services\WServicioWebVenta\configuration.svcinfo" />
+    <None Include="Connected Services\WServicioWebVenta\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="WebFormAbastecimiento.aspx" />
+    <Content Include="WebFormBombaGasolina.aspx" />
+    <Content Include="WebFormCliente.aspx" />
+    <Content Include="WebFormEmpleado.aspx" />
+    <Content Include="WebFormTipoGasolina.aspx" />
+    <Content Include="WebFormUsuario.aspx" />
+    <None Include="Connected Services\WServicioWebUsuario\configuration91.svcinfo" />
+    <None Include="Connected Services\WServicioWebUsuario\configuration.svcinfo" />
+    <None Include="Connected Services\WServicioWebUsuario\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Properties\DataSources\System.Data.DataSet.datasource" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Connected Services\WServicioWebAbastecimiento\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\WServicioWebBombaGasolina\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\WServicioWebCliente\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\WServicioWebEmpleado\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\WServicioWebFormaPago\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\WServicioWebReporteFactura\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\WServicioWebReporteVentas\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\WServicioWebTipoGasolina\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\WServicioWebUsuario\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\WServicioWebVenta\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="dsBuscarFactura.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsBuscarFactura.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsFiltrarVentas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsFiltrarVentas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="rptFiltrarVentas.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptFiltrarVentas.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptReporteFactura.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptReporteFactura.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WebFormAbastecimiento.aspx.cs">
+      <DependentUpon>WebFormAbastecimiento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebFormAbastecimiento.aspx.designer.cs">
+      <DependentUpon>WebFormAbastecimiento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebFormBombaGasolina.aspx.cs">
+      <DependentUpon>WebFormBombaGasolina.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebFormBombaGasolina.aspx.designer.cs">
+      <DependentUpon>WebFormBombaGasolina.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebFormCliente.aspx.cs">
+      <DependentUpon>WebFormCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebFormCliente.aspx.designer.cs">
+      <DependentUpon>WebFormCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebFormEmpleado.aspx.cs">
+      <DependentUpon>WebFormEmpleado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebFormEmpleado.aspx.designer.cs">
+      <DependentUpon>WebFormEmpleado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebFormFormaPago.aspx.cs">
+      <DependentUpon>WebFormFormaPago.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebFormFormaPago.aspx.designer.cs">
+      <DependentUpon>WebFormFormaPago.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebFormLogin.aspx.cs">
+      <DependentUpon>WebFormLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebFormLogin.aspx.designer.cs">
+      <DependentUpon>WebFormLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebFormMaster.aspx.cs">
+      <DependentUpon>WebFormMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebFormMaster.aspx.designer.cs">
+      <DependentUpon>WebFormMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebFormReporteFactura.aspx.cs">
+      <DependentUpon>WebFormReporteFactura.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebFormReporteFactura.aspx.designer.cs">
+      <DependentUpon>WebFormReporteFactura.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebFormReportes.aspx.cs">
+      <DependentUpon>WebFormReportes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebFormReportes.aspx.designer.cs">
+      <DependentUpon>WebFormReportes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebFormReporteVentas.aspx.cs">
+      <DependentUpon>WebFormReporteVentas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebFormReporteVentas.aspx.designer.cs">
+      <DependentUpon>WebFormReporteVentas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebFormTipoGasolina.aspx.cs">
+      <DependentUpon>WebFormTipoGasolina.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebFormTipoGasolina.aspx.designer.cs">
+      <DependentUpon>WebFormTipoGasolina.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebFormUsuario.aspx.cs">
+      <DependentUpon>WebFormUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebFormUsuario.aspx.designer.cs">
+      <DependentUpon>WebFormUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebFormVenta.aspx.cs">
+      <DependentUpon>WebFormVenta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebFormVenta.aspx.designer.cs">
+      <DependentUpon>WebFormVenta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebFormVentas.aspx.cs">
+      <DependentUpon>WebFormVentas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebFormVentas.aspx.designer.cs">
+      <DependentUpon>WebFormVentas.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\WServicioWebUsuario\wsUsuario1.wsdl" />
+    <None Include="Connected Services\WServicioWebVenta\wsVenta1.wsdl" />
+    <Content Include="libman.json" />
+    <Content Include="dsBuscarFactura.xsc">
+      <DependentUpon>dsBuscarFactura.xsd</DependentUpon>
+    </Content>
+    <None Include="dsBuscarFactura.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsBuscarFactura.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="dsBuscarFactura.xss">
+      <DependentUpon>dsBuscarFactura.xsd</DependentUpon>
+    </Content>
+    <Content Include="dsFiltrarVentas.xsc">
+      <DependentUpon>dsFiltrarVentas.xsd</DependentUpon>
+    </Content>
+    <None Include="dsFiltrarVentas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsFiltrarVentas.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="dsFiltrarVentas.xss">
+      <DependentUpon>dsFiltrarVentas.xsd</DependentUpon>
+    </Content>
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\WServicioWebAbastecimiento\" />
+    <WCFMetadataStorage Include="Connected Services\WServicioWebBombaGasolina\" />
+    <WCFMetadataStorage Include="Connected Services\WServicioWebCliente\" />
+    <WCFMetadataStorage Include="Connected Services\WServicioWebEmpleado\" />
+    <WCFMetadataStorage Include="Connected Services\WServicioWebFormaPago\" />
+    <WCFMetadataStorage Include="Connected Services\WServicioWebReporteFactura\" />
+    <WCFMetadataStorage Include="Connected Services\WServicioWebReporteVentas\" />
+    <WCFMetadataStorage Include="Connected Services\WServicioWebTipoGasolina\" />
+    <WCFMetadataStorage Include="Connected Services\WServicioWebUsuario\" />
+    <WCFMetadataStorage Include="Connected Services\WServicioWebVenta\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="rptFiltrarVentas.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptFiltrarVentas.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReporteFactura.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptReporteFactura.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>53694</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:53694/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
